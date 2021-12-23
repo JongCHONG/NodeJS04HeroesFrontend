@@ -25,7 +25,15 @@ const Heroes = () => {
     return <p>Chargement...</p>    
   }
 
-  console.log(heroes)
+  const handleReset = () => {
+    fetch(`https://nodejs04heroes.herokuapp.com/heroes/`, {
+      method: "put"
+    })
+    .then(response => response.json())
+    .then(data => setHeroes(data))
+  }
+
+  // console.log(location)
   return (
     <>
       {!slug ? 
@@ -34,8 +42,9 @@ const Heroes = () => {
           <div className='col-6'>
             <h1>The Avengers</h1>
           </div>
-          <div className='col-6 text-end align-self-center'>
-            <Link to="/form">Create a new Avenger...</Link>
+          <div className='col-6 justify-content-end align-self-center d-flex'>
+            <button type="button" className="btn btn-outline-secondary"><Link to="/form" className='text-decoration-none'>Create a new Avenger...</Link></button>
+            <button type="button" className="btn btn-outline-success ms-3" onClick={handleReset}>Reset</button>
           </div>
         </div>
         <div className="row">
