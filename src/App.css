@@ -13,3 +13,11 @@
   background-position: center;
   background-color: cadetblue;
 }
+
+.link{
+  color: cyan;
+}
+
+h1 a {
+  color: white;
+}

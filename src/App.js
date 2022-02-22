@@ -11,7 +11,7 @@ import NotFound from './pages/NotFound'
 const App = () => {
   return (
     <div className='main'>
-      <div className="container">
+      <div className="container py-5">
         <BrowserRouter>
           <Routes>
             <Route exact path="/" element={<Heroes/>}/>

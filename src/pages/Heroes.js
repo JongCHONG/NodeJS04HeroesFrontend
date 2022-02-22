@@ -40,10 +40,14 @@ const Heroes = () => {
       <>
         <div className="row">
           <div className='col-6'>
-            <h1>The Avengers</h1>
+            <h1>
+              <Link to="/" className='text-decoration-none'>
+                The Avengers
+              </Link>
+            </h1>
           </div>
           <div className='col-6 justify-content-end align-self-center d-flex'>
-            <button type="button" className="btn btn-outline-secondary"><Link to="/form" className='text-decoration-none'>Create a new Avenger...</Link></button>
+            <button type="button" className="btn btn-outline-info"><Link to="/form" className='link text-decoration-none'>Create a new Avenger...</Link></button>
             <button type="button" className="btn btn-outline-success ms-3" onClick={handleReset}>Reset</button>
           </div>
         </div>
@@ -60,7 +64,14 @@ const Heroes = () => {
         </div>
       </>
       : 
-        <HeroCard />
+      <>
+        <div className="row">
+          <div className='col-6'>
+            <h1>The Avengers</h1>
+          </div>
+        </div>
+          <HeroCard />
+      </>
       }
     </>
   )
