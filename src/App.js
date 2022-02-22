@@ -10,16 +10,18 @@ import NotFound from './pages/NotFound'
 
 const App = () => {
   return (
-    <div className="container my-2">
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Heroes/>}/>
-          <Route exact path="/heroes" element={<Heroes />} />
-          <Route path="/heroes/:slug" element={<Heroes />} />
-          <Route path="/form" element={<Form />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+    <div className='main'>
+      <div className="container">
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Heroes/>}/>
+            <Route exact path="/heroes" element={<Heroes />} />
+            <Route path="/heroes/:slug" element={<Heroes />} />
+            <Route path="/form" element={<Form />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   )
 }
